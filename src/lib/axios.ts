@@ -5,6 +5,9 @@ import storage from "@/utils/storage";
 
 function authRequestInterceptor(config: AxiosRequestConfig) {
   const token = storage.getToken();
+
+  config.headers = config.headers || {};
+
   if (token) {
     config.headers.authorization = `${token}`;
   }
@@ -16,6 +19,7 @@ export const axios = Axios.create({
   baseURL: API_URL,
 });
 
+// @ts-ignore
 axios.interceptors.request.use(authRequestInterceptor);
 axios.interceptors.response.use(
   (response) => {
