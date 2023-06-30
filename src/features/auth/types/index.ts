@@ -4,6 +4,12 @@ export type AuthUser = {
 };
 
 export type UserResponse = {
-    jwt: string;
+    token: string;
+    refreshToken: string;
     user: AuthUser;
+};
+
+export type LoginCredentialsDTO = {
+    email: string;
+    password: string;
 };

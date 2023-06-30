@@ -1,8 +1,10 @@
-import { useNavigate } from 'react-router-dom';
+import {LoginForm} from "@/features/auth/components/LoginForm";
 
 export const Login = () => {
-    useNavigate();
     return (
-        <p>login</p>
+        <>
+            <h3 className="text-white">login component</h3>
+            <LoginForm/>
+        </>
     )
 }
