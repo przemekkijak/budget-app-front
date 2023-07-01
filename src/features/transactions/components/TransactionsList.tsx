@@ -6,6 +6,7 @@ import { getTransactions} from "@/features/transactions/api/getTransactions";
 import {DataGrid, GridColDef} from "@mui/x-data-grid";
 import {css} from "@emotion/react";
 import dayjs from 'dayjs';
+import {Button} from "@mui/material";
 
 
 export const TransactionsList = ({ budgetId, width, height }: { budgetId: number, width: string, height: string}) => {
@@ -36,9 +37,28 @@ export const TransactionsList = ({ budgetId, width, height }: { budgetId: number
     { field: 'status', headerName: 'Status', width: 100, valueGetter: (params) => getStatusLabel(params.value as number)}
   ]
 
+
   return (
-      <div style={{ width: width, height: height }}>
-        {transactions.length > 0 ?
+      <div style={{ width: width, height: height, display: 'flex', flexDirection: 'column' }}>
+
+        <div css={css`display: flex; flex-direction: row; justify-content: left`}>
+          <Button variant="outlined" css={css`
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 15%;
+        margin-bottom: 2%;
+        margin-right: 1%;`}>Add</Button>
+
+          <Button variant="outlined" css={css`
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 15%;
+        margin-bottom: 2%;`}>Import</Button>
+        </div>
+
+        {transactions.length > 0 ? (
             <DataGrid
                 autoHeight
                 key={budgetId}
@@ -53,13 +73,14 @@ export const TransactionsList = ({ budgetId, width, height }: { budgetId: number
                   },
                   sorting: {
                     sortModel: [{
-                      field: 'paymentDate', sort: 'desc'
-                    }]
-                  }
+                      field: 'paymentDate',
+                      sort: 'desc',
+                    }],
+                  },
                 }}
             />
-            : null
-        }
+        ) : null}
       </div>
+
   )
 }
