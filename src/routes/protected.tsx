@@ -1,7 +1,7 @@
 import React from "react";
 import {Outlet} from "react-router-dom";
 import {Dashboard} from "@/features/budgets/routes/Dashboard";
-import { MainLayout } from "@/features/auth/components/MainLayout";
+import { MainLayout } from "@/components/MainLayout";
 
 
 export const AppProtectedRoutes = () => {
