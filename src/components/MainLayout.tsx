@@ -21,7 +21,7 @@ export const MainLayout = ({ children }: MainLayoutProps) => {
   border: 1px solid pink;
   `}>
       <Sidebar />
-      <main>{children}</main>
+      <main css={css`width: 90vw`}>{children}</main>
     </div>
   )
 };

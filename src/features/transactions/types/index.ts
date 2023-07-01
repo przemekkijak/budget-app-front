@@ -1,9 +1,9 @@
 import { BankAccount } from "@/features/bankAccounts/types";
 
 export enum TransactionStatusEnum {
-    New = 'New',
-    Completed = 'Completed',
-    Scheduled = 'Scheduled'
+  New = 0,
+  Completed = 1,
+  Scheduled = 2
 }
 
 export type Transaction = {
