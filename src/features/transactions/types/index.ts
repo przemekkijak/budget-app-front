@@ -10,7 +10,7 @@ export type Transaction = {
   id: number;
   budgetId: number;
   bankAccountId: number;
-  bankAccount: BankAccount;
+  bankAccount?: BankAccount;
   recipient: string;
   amount: number;
   amountText: string;

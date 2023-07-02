@@ -9,9 +9,10 @@ function authRequestInterceptor(config: AxiosRequestConfig) {
   config.headers = config.headers || {};
 
   if (token) {
-    config.headers.authorization = `Bearer ${token}`;
+    config.headers.Authorization = `Bearer ${token}`;
   }
   config.headers.Accept = "application/json";
+
   return config;
 }
 
