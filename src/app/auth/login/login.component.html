@@ -1,1 +1,13 @@
-<p>login works!</p>
+<div class="container">
+  <form [formGroup]="loginForm">
+    <mat-form-field>
+      <input matInput placeholder="login">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="password">
+    </mat-form-field>
+
+    <button mat-raised-button>Login</button>
+  </form>
+</div>
