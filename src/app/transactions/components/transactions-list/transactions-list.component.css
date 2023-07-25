@@ -1,0 +1,10 @@
+.transactions-list-container {
+  width: 100%;
+  height: 100%;
+}
+.transactions-list-container .table-container {
+  height: 100%;
+  overflow: auto;
+}
+
+/*# sourceMappingURL=transactions-list.component.css.map */

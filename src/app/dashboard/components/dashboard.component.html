@@ -1,1 +1,6 @@
-<p>dashboard works!</p>
+
+<div class="container">
+  <div class="transaction-list" *ngIf="budget != null">
+    <app-transactions-list [budgetId]="budget.id"/>
+  </div>
+</div>
