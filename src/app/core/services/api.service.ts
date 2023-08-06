@@ -42,4 +42,9 @@ export class ApiService extends BaseApiService {
     const headers = this.getHeaders();
     return this.http.post<T>(`${this.baseUrl}${path}`, body, { headers: headers}).pipe(catchError(this.handleError));
   }
+
+  patch<T>(path: string, body: any): Observable<T> {
+    const headers = this.getHeaders();
+    return this.http.patch<T>(`${this.baseUrl}${path}`, body, { headers: headers}).pipe(catchError(this.handleError));
+  }
 }

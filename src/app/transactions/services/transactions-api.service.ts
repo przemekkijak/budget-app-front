@@ -18,4 +18,12 @@ export class TransactionsApiService extends BaseApiService {
     getTransactionsForBudget(budgetId: number): Observable<Transaction[]> {
       return this.apiService.get(`${this.baseUrl}/${budgetId}`)
     }
+
+    addTransaction(transaction: Transaction) {
+      return this.apiService.post(this.baseUrl, transaction)
+    }
+
+    updateTransaction(transaction: Transaction) {
+      return this.apiService.patch(this.baseUrl, transaction)
+    }
 }

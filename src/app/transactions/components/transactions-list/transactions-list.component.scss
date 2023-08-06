@@ -5,5 +5,20 @@
   .table-container {
     height: 100%;
     overflow: auto;
+
+    table {
+      tr {
+        :hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+.add-transaction-button-container {
+  button {
+    margin-left: 1%;
+    width: 15%;
   }
 }

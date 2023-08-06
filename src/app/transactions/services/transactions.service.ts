@@ -12,7 +12,14 @@ export class TransactionsService {
   }
 
   getTransactionsForBudget(budgetId: number): Observable<Transaction[]> {
-    return this.transactionApiService.getTransactionsForBudget(budgetId)
+    return this.transactionApiService.getTransactionsForBudget(budgetId);
   };
 
+  createTransaction(transaction: Transaction) {
+    return this.transactionApiService.addTransaction(transaction);
+  }
+
+  updateTransaction(transaction: Transaction) {
+    return this.transactionApiService.updateTransaction(transaction);
+  }
 }

@@ -1,0 +1,11 @@
+.container {
+  padding: 3%;
+}
+.container form div {
+  margin: 2%;
+}
+.container form div label {
+  margin-right: 1%;
+}
+
+/*# sourceMappingURL=transaction-dialog.component.css.map */

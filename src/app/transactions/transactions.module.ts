@@ -3,11 +3,15 @@ import { CommonModule } from '@angular/common';
 import { TransactionsListComponent } from './components/transactions-list/transactions-list.component';
 import {MatTableModule} from "@angular/material/table";
 import {MatPaginatorModule} from "@angular/material/paginator";
+import { TransactionDialogComponent } from './components/transaction-dialog/transaction-dialog.component';
+import {FormsModule} from "@angular/forms";
+import {MatButtonModule} from "@angular/material/button";
 
 
 @NgModule({
     declarations: [
-      TransactionsListComponent
+      TransactionsListComponent,
+      TransactionDialogComponent
     ],
     exports: [
       TransactionsListComponent
@@ -15,7 +19,9 @@ import {MatPaginatorModule} from "@angular/material/paginator";
     imports: [
       CommonModule,
       MatTableModule,
-      MatPaginatorModule
+      MatPaginatorModule,
+      FormsModule,
+      MatButtonModule,
     ]
 })
 export class TransactionsModule { }

@@ -1,11 +1,13 @@
+import {BankAccount} from "../../bank-accounts/models/bankAccount";
+
 export interface Transaction {
   id: number;
   budgetId: number;
   bankAccountId: number;
-  //bankACcountModel
+  bankAccount: BankAccount | null;
   recipient: string;
   amount: number;
-  status: number; //TODO Enum
+  status: number;
   userId: number;
   description: string;
   paymentDate: Date;
