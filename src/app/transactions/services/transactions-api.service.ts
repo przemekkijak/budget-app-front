@@ -26,4 +26,6 @@ export class TransactionsApiService extends BaseApiService {
     updateTransaction(transaction: Transaction) {
       return this.apiService.patch(this.baseUrl, transaction)
     }
+
+
 }

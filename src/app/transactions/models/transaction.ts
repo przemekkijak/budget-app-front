@@ -14,4 +14,5 @@ export interface Transaction {
   createDate: Date;
   updateDate: Date;
   importHash: string;
+  isDeleted: boolean;
 }

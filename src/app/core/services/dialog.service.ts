@@ -15,7 +15,8 @@ export class DialogService {
 
   openTransactionDialog(budgetId: number | null, transaction: Transaction | null): Observable<Transaction> | undefined {
     const dialogRef = this.dialog.open(TransactionDialogComponent, {
-      width: '40vw',
+      width: '45vw',
+      height: '40vh',
       data: {
         budgetId: budgetId,
         transaction: transaction

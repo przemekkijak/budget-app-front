@@ -27,10 +27,12 @@ export class TransactionDialogComponent {
     createDate: new Date(),
     updateDate: new Date(),
     importHash: '',
+    isDeleted: false
   };
 
   transactionStatuses = Object.keys(TransactionStatusLabels).map((key) => Number(key));
   transactionStatusLabels = TransactionStatusLabels;
+  deleteAvailable: boolean = false;
 
   budgetBankAccounts: BankAccount[] = [];
 
@@ -47,6 +49,7 @@ export class TransactionDialogComponent {
 
     if (this.data.transaction) {
       this.transaction = this.data.transaction;
+      this.deleteAvailable = true;
     } else {
       this.transaction.budgetId = this.data.budgetId;
     }
@@ -66,5 +69,10 @@ export class TransactionDialogComponent {
   onCancel(): void {
     // Here, you can handle the form cancellation and close the dialog without returning any data.
     this.dialogRef.close();
+  }
+
+  onDelete(): void {
+    this.transaction.isDeleted = true;
+    this.dialogRef.close(this.transaction);
   }
 }
