@@ -1,0 +1,14 @@
+<table *ngIf="bankAccounts !== undefined" border="1">
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Amount</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let bankAccount of bankAccounts">
+    <td>{{ bankAccount.name }}</td>
+    <td>{{ bankAccount.amount }}</td>
+  </tr>
+  </tbody>
+</table>

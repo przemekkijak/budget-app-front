@@ -1,6 +1,9 @@
+<div class="container" *ngIf="budget != null">
+  <div class="bankAccountsContainer">
+    <app-bank-account-summary [budgetId]="budget.id"/>
+  </div>
 
-<div class="container">
-  <div class="transaction-list" *ngIf="budget != null">
+  <div class="transaction-list">
     <app-transactions-list [budgetId]="budget.id"/>
   </div>
 </div>
