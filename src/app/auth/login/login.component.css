@@ -1,0 +1,12 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+.container mat-form-field {
+  margin: 1%;
+}
+
+/*# sourceMappingURL=login.component.css.map */
