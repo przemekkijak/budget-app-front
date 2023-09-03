@@ -1,14 +1,17 @@
-<table *ngIf="bankAccounts !== undefined" border="1">
-  <thead>
-  <tr>
-    <th>Name</th>
-    <th>Amount</th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr *ngFor="let bankAccount of bankAccounts">
-    <td>{{ bankAccount.name }}</td>
-    <td>{{ bankAccount.amount }}</td>
-  </tr>
-  </tbody>
-</table>
+<div class="container">
+  <mat-table *ngIf="bankAccounts !== undefined" [dataSource]="bankAccounts">
+    <ng-container matColumnDef="name">
+      <mat-header-cell *matHeaderCellDef>Name</mat-header-cell>
+      <mat-cell *matCellDef="let bankAccount">{{ bankAccount.name }}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="amount">
+      <mat-header-cell *matHeaderCellDef>Amount</mat-header-cell>
+      <mat-cell *matCellDef="let bankAccount">{{ bankAccount.amount }} PLN</mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="['name', 'amount']"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: ['name', 'amount']"></mat-row>
+  </mat-table>
+
+</div>

@@ -14,12 +14,14 @@
   align-items: flex-start;
   width: 70%;
   position: relative;
-  top: -10%;
+  top: -13%;
 }
 
 .transaction-list {
+  position: relative;
+  top: -7%;
   width: 70%;
-  height: 50vh;
+  height: 55vh;
 }
 
 /*# sourceMappingURL=dashboard.component.css.map */

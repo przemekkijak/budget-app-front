@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":[],"names":[],"mappings":"","file":"bank-account-summary.component.css"}
+{"version":3,"sourceRoot":"","sources":["bank-account-summary.component.scss"],"names":[],"mappings":"AAAA;EACE","file":"bank-account-summary.component.css"}

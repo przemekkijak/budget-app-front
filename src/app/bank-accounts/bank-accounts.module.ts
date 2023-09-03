@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BankAccountSummaryComponent } from './components/bank-account-summary/bank-account-summary.component';
+import {MatTableModule} from "@angular/material/table";
 
 
 
@@ -12,7 +13,8 @@ import { BankAccountSummaryComponent } from './components/bank-account-summary/b
     BankAccountSummaryComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    MatTableModule
   ]
 })
 export class BankAccountsModule { }

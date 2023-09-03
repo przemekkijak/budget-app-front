@@ -20,7 +20,7 @@
       <input type="date" id="paymentDate" name="paymentDate" [(ngModel)]="transaction.paymentDate" required>
     </div>
 
-    <div *ngIf="transaction.bankAccount">
+    <div *ngIf="budgetBankAccounts">
       <label for="bankAccount">Bank account:</label>
       <select id="bankAccount" name="bankAccount" [(ngModel)]="transaction.bankAccountId"required>
         <option *ngFor="let bankAccount of budgetBankAccounts" [ngValue]="bankAccount.id">{{ bankAccount.name }}</option>

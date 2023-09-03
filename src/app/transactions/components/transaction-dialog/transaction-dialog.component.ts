@@ -57,6 +57,7 @@ export class TransactionDialogComponent {
     this.bankAccountsService.getBankAccountsForBudget(this.transaction.budgetId)
       .subscribe((res: BankAccount[]) => {
         this.budgetBankAccounts = res;
+        this.transaction.bankAccountId = this.budgetBankAccounts.filter(a => a.isDefault)[0].id;
       })
 
   }
