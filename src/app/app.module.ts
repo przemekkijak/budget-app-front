@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { AuthModule } from './auth/auth.module';
 import {MatDialogModule} from "@angular/material/dialog";
 import { SidebarComponent } from './shared/components/sidebar/sidebar.component';
+import {MatSelectModule} from "@angular/material/select";
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { SidebarComponent } from './shared/components/sidebar/sidebar.component'
     HttpClientModule,
     BrowserAnimationsModule,
     MatDialogModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

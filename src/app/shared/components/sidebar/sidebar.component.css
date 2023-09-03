@@ -1,12 +1,16 @@
 @charset "UTF-8";
 .container {
-  height: 80vh;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-right: 1px solid black;
+  background-color: #fafafa;
 }
 
 .menu {
+  position: relative;
+  top: -10%;
   padding: 20px; /* Wewnętrzny odstęp menu */
 }
 
@@ -20,7 +24,7 @@ li {
 }
 
 a {
-  color: black;
+  color: #363434;
   text-decoration: none; /* Usunięcie podkreślenia z linków */
   font-size: 18px; /* Rozmiar czcionki */
   display: block; /* Zmiana na blok, aby linki były na całej szerokości */

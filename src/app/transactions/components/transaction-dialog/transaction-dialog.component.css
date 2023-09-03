@@ -1,13 +1,20 @@
 .container {
-  padding: 20px;
   background-color: #fff;
   border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 form {
+  width: 60%;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+form .formButtons button {
+  margin: 3%;
 }
 
 /*# sourceMappingURL=transaction-dialog.component.css.map */
