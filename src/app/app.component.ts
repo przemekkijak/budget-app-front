@@ -15,8 +15,6 @@ export class AppComponent {
   }
 
   ngOnInit() {
-    console.log('app component generated')
     this.userLoggedIn = this.authService.isUserLoggedIn()
-
   }
 }
