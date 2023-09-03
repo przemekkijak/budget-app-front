@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {AuthService} from "./auth/services/auth.service";
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'BudgetAppFront';
+  title = 'BudgetApp';
+
+  public userLoggedIn: boolean = false;
+
+  constructor(private authService: AuthService) {
+  }
+
+  ngOnInit() {
+    console.log('app component generated')
+    this.userLoggedIn = this.authService.isUserLoggedIn()
+
+  }
 }

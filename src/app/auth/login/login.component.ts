@@ -3,6 +3,8 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 import { StorageService } from 'src/app/core/services/storage.service';
 import { AuthApiService } from '../services/auth-api.service';
 import { LoginResult } from '../models/login-result';
+import {Router} from "@angular/router";
+import {AuthService} from "../services/auth.service";
 
 @Component({
   selector: 'app-login',
@@ -13,8 +15,9 @@ export class LoginComponent {
   loginForm: FormGroup;
 
   constructor(private formBuilder: FormBuilder,
-              private authApiService: AuthApiService,
-              private storageService: StorageService) {
+              private authService: AuthService,
+              private storageService: StorageService,
+              private router: Router) {
     this.loginForm = this.formBuilder.group({
       email: '',
       password: ''
@@ -27,11 +30,9 @@ export class LoginComponent {
   }
 
   login(formData: any) {
-    this.authApiService.login(formData).subscribe((res: LoginResult) => {
-      if (res.token) {
-        this.storageService.saveToken(res);
-        console.log('user logged, token saved')
-        console.log(res)
+    this.authService.login(formData).subscribe((res) => {
+      if (res) {
+        this.router.navigate(['dashboard'])
       }
     })
   }

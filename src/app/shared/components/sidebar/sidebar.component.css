@@ -1,0 +1,35 @@
+@charset "UTF-8";
+.container {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu {
+  padding: 20px; /* Wewnętrzny odstęp menu */
+}
+
+ul {
+  list-style: none; /* Usunięcie standardowych kropek dla listy */
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px; /* Odstęp między pozycjami menu */
+}
+
+a {
+  color: black;
+  text-decoration: none; /* Usunięcie podkreślenia z linków */
+  font-size: 18px; /* Rozmiar czcionki */
+  display: block; /* Zmiana na blok, aby linki były na całej szerokości */
+  padding: 12px; /* Wewnętrzny odstęp linków */
+  transition: background-color 0.3s; /* Płynna zmiana koloru tła */
+}
+
+a:hover {
+  background-color: #d7d7d7;
+}
+
+/*# sourceMappingURL=sidebar.component.css.map */

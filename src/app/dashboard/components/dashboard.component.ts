@@ -7,6 +7,7 @@ import {Budget} from "../../budgets/models/budget";
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss']
 })
+
 export class DashboardComponent implements OnInit {
   public budget: Budget | null = null;
 
