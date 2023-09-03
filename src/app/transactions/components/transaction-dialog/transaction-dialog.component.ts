@@ -46,7 +46,6 @@ export class TransactionDialogComponent {
   }
 
   ngOnInit() {
-
     if (this.data.transaction) {
       this.transaction = this.data.transaction;
       this.deleteAvailable = true;
@@ -66,12 +65,10 @@ export class TransactionDialogComponent {
   }
 
   onSubmit(): void {
-    // Here, you can handle the form submission and emit the transaction data.
     this.dialogRef.close(this.transaction);
   }
 
   onCancel(): void {
-    // Here, you can handle the form cancellation and close the dialog without returning any data.
     this.dialogRef.close();
   }
 
