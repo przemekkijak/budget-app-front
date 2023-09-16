@@ -1,0 +1,35 @@
+<div class="container">
+  <mat-stepper linear>
+
+    <!-- Step 1 -->
+    <mat-step [stepControl]="csvFileForm">
+      <form [formGroup]="csvFileForm">
+        <ng-template matStepLabel>Import CSV</ng-template>
+
+        <div>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+
+    <!-- Step 2 -->
+    <mat-step>
+      <ng-template matStepLabel>Hello World 1</ng-template>
+      <p>Hello, world! This is step 2.</p>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </mat-step>
+
+    <!-- Step 3 -->
+    <mat-step>
+      <ng-template matStepLabel>Hello World 2</ng-template>
+      <p>Hello, world! This is step 3.</p>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button (click)="resetStepper()">Reset</button>
+      </div>
+    </mat-step>
+  </mat-stepper>
+</div>

@@ -9,6 +9,7 @@ import { AuthModule } from './auth/auth.module';
 import {MatDialogModule} from "@angular/material/dialog";
 import { SidebarComponent } from './shared/components/sidebar/sidebar.component';
 import {MatSelectModule} from "@angular/material/select";
+import {MatStepperModule} from "@angular/material/stepper";
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import {MatSelectModule} from "@angular/material/select";
     HttpClientModule,
     BrowserAnimationsModule,
     MatDialogModule,
-    MatSelectModule
+    MatSelectModule,
+    MatStepperModule
   ],
   providers: [],
   bootstrap: [AppComponent]

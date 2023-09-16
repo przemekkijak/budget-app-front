@@ -5,6 +5,7 @@ import { MatTableDataSource } from "@angular/material/table";
 import {MatPaginator} from "@angular/material/paginator";
 import {DialogService} from "../../../core/services/dialog.service";
 import {TransactionStatusLabels} from "../../models/enums/transaction-status.enum";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-transactions-list',
@@ -26,7 +27,8 @@ export class TransactionsListComponent {
 
   constructor(
     private transactionsService: TransactionsService,
-    private dialogService: DialogService) {}
+    private dialogService: DialogService,
+    private router: Router) {}
 
   ngOnInit() {
     if (this.budgetId !== 0) {
@@ -60,5 +62,9 @@ export class TransactionsListComponent {
         })
       }
     }))
+  }
+
+  navigateToImport() {
+    this.router.navigate(['transactions/import']);
   }
 }
