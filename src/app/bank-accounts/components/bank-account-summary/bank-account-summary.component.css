@@ -1,5 +1,15 @@
 .container {
+  height: 5vh;
   width: 20vw;
+}
+
+mat-table {
+  width: 80%;
+  height: 80%;
+}
+
+mat-header-cell, mat-cell {
+  font-size: 10px;
 }
 
 /*# sourceMappingURL=bank-account-summary.component.css.map */

@@ -56,15 +56,10 @@ export class TransactionsListComponent {
   openModifyTransactionDialog(transaction: Transaction) {
     this.dialogService.openTransactionDialog(null, transaction)?.subscribe((transaction => {
       if (transaction) {
-        console.log(transaction)
         this.transactionsService.updateTransaction(transaction).subscribe(() => {
           this.getTransactions(this.budgetId);
         })
       }
     }))
-  }
-
-  navigateToImport() {
-    this.router.navigate(['transactions/import']);
   }
 }

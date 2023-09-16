@@ -10,6 +10,7 @@ import {MatDialogModule} from "@angular/material/dialog";
 import { SidebarComponent } from './shared/components/sidebar/sidebar.component';
 import {MatSelectModule} from "@angular/material/select";
 import {MatStepperModule} from "@angular/material/stepper";
+import {MatIconModule} from "@angular/material/icon";
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import {MatStepperModule} from "@angular/material/stepper";
     BrowserAnimationsModule,
     MatDialogModule,
     MatSelectModule,
-    MatStepperModule
+    MatStepperModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

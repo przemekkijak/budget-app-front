@@ -3,7 +3,7 @@ import { HttpEvent, HttpHandler, HttpInterceptor, HttpRequest, HttpErrorResponse
 import { Observable, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 import { Router } from '@angular/router';
-import { StorageService } from '../storage.service';
+import {StorageService} from "../services/storage.service";
 
 @Injectable()
 export class AuthInterceptor implements HttpInterceptor {
@@ -15,14 +15,12 @@ export class AuthInterceptor implements HttpInterceptor {
     const jwtToken = this.storageService.readToken();
 
     if (jwtToken) {
-      console.log('jwt found')
       const cloned = req.clone({
         headers: req.headers.set('Authorization', `Bearer ${jwtToken}`)
       });
 
       return next.handle(cloned).pipe(catchError(x => this.handleAuthError(x)));
     } else {
-      console.log('jwt not found')
       this.router.navigateByUrl('/login');
       return throwError('Not authenticated');
     }

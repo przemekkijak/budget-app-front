@@ -1,35 +1,33 @@
-@charset "UTF-8";
 .container {
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-right: 1px solid black;
-  background-color: #fafafa;
+  background-color: #211f1f;
 }
 
 .menu {
   position: relative;
-  top: -10%;
-  padding: 20px; /* Wewnętrzny odstęp menu */
+  top: -15%;
+  width: 100%;
 }
 
-ul {
-  list-style: none; /* Usunięcie standardowych kropek dla listy */
-  padding: 0;
+.menuItem {
+  transition: background-color 0.3s ease;
+  width: 100%;
 }
 
-li {
-  margin-bottom: 10px; /* Odstęp między pozycjami menu */
+.menuItem:hover {
+  background-color: #333131;
 }
 
-a {
-  color: #363434;
-  text-decoration: none; /* Usunięcie podkreślenia z linków */
-  font-size: 18px; /* Rozmiar czcionki */
-  display: block; /* Zmiana na blok, aby linki były na całej szerokości */
-  padding: 12px; /* Wewnętrzny odstęp linków */
-  transition: background-color 0.3s; /* Płynna zmiana koloru tła */
+.menuItem a {
+  color: #fffcfc;
+  text-decoration: none;
+  display: block;
+  padding: 14px;
+  width: 100%;
+  transition: background-color 0.3s;
 }
 
 /*# sourceMappingURL=sidebar.component.css.map */
