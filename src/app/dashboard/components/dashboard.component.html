@@ -1,9 +1,28 @@
 <div class="container" *ngIf="budget != null">
-  <div class="bankAccountsContainer">
-    <app-bank-account-summary [budgetId]="budget.id"/>
+
+  <div class="left-section">
+    <div class="bankAccountsContainer">
+      <app-bank-account-summary [budgetId]="budget.id"></app-bank-account-summary>
+    </div>
+
+    <div class="transaction-list">
+      <app-transactions-list [budgetId]="budget.id"></app-transactions-list>
+    </div>
   </div>
 
-  <div class="transaction-list">
-    <app-transactions-list [budgetId]="budget.id"/>
+  <div class="right-section">
+    <div class="bankAccountsContainer">
+      <app-bank-account-summary [budgetId]="budget.id"></app-bank-account-summary>
+    </div>
+    <div class="transactionsChart">
+      <app-transactions-chart [budgetId]="budget.id"></app-transactions-chart>
+    </div>
+    <div class="bankAccountsContainer">
+      <app-bank-account-summary [budgetId]="budget.id"></app-bank-account-summary>
+    </div>
+    <div class="bankAccountsContainer">
+      <app-bank-account-summary [budgetId]="budget.id"></app-bank-account-summary>
+    </div>
   </div>
+
 </div>

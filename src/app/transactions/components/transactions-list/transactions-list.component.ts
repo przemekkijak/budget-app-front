@@ -17,7 +17,7 @@ export class TransactionsListComponent {
 
   transactionStatusLabels = TransactionStatusLabels;
   dataSource = new MatTableDataSource<Transaction>();
-  columnsToDisplay = ['paymentDate', 'recipient', 'description', 'bankAccount', 'amount', 'status'];
+  columnsToDisplay = ['row', 'paymentDate', 'recipient', 'description', 'bankAccount', 'amount', 'status'];
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
 

@@ -11,12 +11,12 @@ import {BankAccountsModule} from "../bank-accounts/bank-accounts.module";
   declarations: [
     DashboardComponent
   ],
-  imports: [
-    CommonModule,
-    DashboardRoutingModule,
-    TransactionsModule,
-    MatPaginatorModule,
-    BankAccountsModule
-  ]
+    imports: [
+        CommonModule,
+        DashboardRoutingModule,
+        TransactionsModule,
+        MatPaginatorModule,
+        BankAccountsModule,
+    ]
 })
 export class DashboardModule { }

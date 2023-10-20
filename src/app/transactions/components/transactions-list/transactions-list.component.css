@@ -6,6 +6,10 @@
   height: 100%;
   overflow: auto;
 }
+.transactions-list-container .table-container table tr {
+  /* Adjust padding to add more space between rows */
+  padding: 10px 0;
+}
 .transactions-list-container .table-container table tr :hover {
   cursor: pointer;
 }

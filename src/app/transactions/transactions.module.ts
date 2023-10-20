@@ -12,17 +12,21 @@ import {MatInputModule} from "@angular/material/input";
 import {TransactionsImportComponent} from "./components/transactions-import/transactions-import.component";
 import {TransactionsRoutingModule} from "./transactions-routing-module";
 import {MatStepperModule} from "@angular/material/stepper";
+import {TransactionsChartComponent} from "./components/transactions-chart/transactions-chart.component";
+import {NgChartsModule} from "ng2-charts";
 
 
 @NgModule({
     declarations: [
       TransactionsListComponent,
       TransactionDialogComponent,
-      TransactionsImportComponent
+      TransactionsImportComponent,
+      TransactionsChartComponent
     ],
-    exports: [
-      TransactionsListComponent
-    ],
+  exports: [
+    TransactionsListComponent,
+    TransactionsChartComponent,
+  ],
   imports: [
     CommonModule,
     MatTableModule,
@@ -34,7 +38,8 @@ import {MatStepperModule} from "@angular/material/stepper";
     MatInputModule,
     TransactionsRoutingModule,
     MatStepperModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgChartsModule
   ]
 })
 export class TransactionsModule { }
