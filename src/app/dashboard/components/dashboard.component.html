@@ -1,8 +1,12 @@
 <div class="container" *ngIf="budget != null">
 
   <div class="left-section">
-    <div class="bankAccountsContainer">
-      <app-bank-account-summary [budgetId]="budget.id"></app-bank-account-summary>
+
+    <div class="incomesBox">
+      <div class="account-box" *ngFor="let item of accounts">
+        <div class="account-title">{{ item.title }}</div>
+        <div class="account-value">{{ item.value | number : '.2-2' }} zł</div>
+      </div>
     </div>
 
     <div class="transaction-list">
@@ -11,17 +15,30 @@
   </div>
 
   <div class="right-section">
+
     <div class="bankAccountsContainer">
       <app-bank-account-summary [budgetId]="budget.id"></app-bank-account-summary>
     </div>
+
     <div class="transactionsChart">
       <app-transactions-chart [budgetId]="budget.id"></app-transactions-chart>
     </div>
-    <div class="bankAccountsContainer">
-      <app-bank-account-summary [budgetId]="budget.id"></app-bank-account-summary>
-    </div>
-    <div class="bankAccountsContainer">
-      <app-bank-account-summary [budgetId]="budget.id"></app-bank-account-summary>
+
+    <div class="averageSpending">
+      <div class="spendingInfo">
+        <div class="spendItem">
+          <span class="label">Average Monthly Spend</span>
+          <span class="value">377.26 zł</span>
+        </div>
+        <div class="spendItem">
+          <span class="label">Last 6 month total Spend</span>
+          <span class="value">2263.67 zł</span>
+        </div>
+        <div class="spendItem">
+          <span class="label">Last 1 year total Spend</span>
+          <span class="value">4896.67 zł</span>
+        </div>
+      </div>
     </div>
   </div>
 

@@ -1,11 +1,12 @@
 <div class="container">
+  <div class="logo">BudgetAPP</div>
   <div class="menu">
-      <div class="menuItem"><a [routerLink]="['/dashboard']">Dashboard</a></div>
-      <div class="menuItem"><a [routerLink]="['/history']">Transactions</a></div>
-      <div class="menuItem"><a [routerLink]="['/statistics']">Bank accounts</a></div>
-      <div class="menuItem"><a [routerLink]="['/statistics']">Cryptocurrencies</a></div>
-      <div class="menuItem"><a [routerLink]="['/statistics']">Stocks</a></div>
-      <div class="menuItem"><a [routerLink]="['/statistics']">Statistics</a></div>
-      <div class="menuItem"><a (click)="logout()">Logout</a></div>
+    <div class="menuItem"><a class="menuLink" [routerLink]="['/dashboard']"><i class="fas fa-tachometer-alt"></i> Dashboard</a></div>
+    <div class="menuItem"><a class="menuLink" [routerLink]="['/history']"><i class="fas fa-history"></i> History</a></div>
+    <div class="menuItem"><a class="menuLink" [routerLink]="['/statistics']"><i class="fas fa-university"></i> Bank accounts</a></div>
+    <div class="menuItem"><a class="menuLink" [routerLink]="['/statistics']"><i class="fas fa-coins"></i> Cryptocurrencies</a></div>
+    <div class="menuItem"><a class="menuLink" [routerLink]="['/statistics']"><i class="fas fa-chart-line"></i> Stocks</a></div>
+    <div class="menuItem"><a class="menuLink" [routerLink]="['/statistics']"><i class="fas fa-chart-pie"></i> Statistics</a></div>
+    <div class="menuItem"><a class="menuLink" (click)="logout()"><i class="fas fa-sign-out-alt"></i> Logout</a></div>
   </div>
 </div>

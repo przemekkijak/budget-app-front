@@ -2,13 +2,14 @@
   display: flex;
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
 }
 .container .sidebar {
-  width: 12%;
+  flex: 0 0 12%; /* This sets the sidebar to a fixed width of 12% of the container */
+  max-width: 12%; /* Ensure it doesn't grow beyond 12% */
+  overflow-y: hidden; /* If the content in the sidebar exceeds its height, a scrollbar will appear */
 }
 .container .app {
-  width: 88%;
+  flex: 1; /* This allows the app content to take up the remaining width of the container */
 }
 
 /*# sourceMappingURL=app.component.css.map */

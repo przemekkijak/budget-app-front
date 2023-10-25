@@ -1,0 +1,50 @@
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f9f9f9; /* Updated background color */
+}
+
+.menu {
+  width: 20%; /* Updated width for sidebar */
+  background-color: #ffffff; /* Set a light background */
+  border-right: 1px solid #e0e0e0; /* Add a border */
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  overflow-y: auto; /* Scrollbar if needed */
+}
+
+.menuItem {
+  transition: background-color 0.3s ease;
+  width: 100%;
+  border-bottom: 1px solid #e0e0e0; /* Separator between menu items */
+}
+
+.menuItem:last-child {
+  border-bottom: none;
+}
+
+.menuItem:hover {
+  background-color: #f5f5f5;
+}
+
+.menuLink {
+  color: #333;
+  text-decoration: none;
+  display: block;
+  padding: 14px 20px; /* Added some horizontal padding */
+  width: 100%;
+  transition: color 0.3s;
+}
+
+.menuLink:hover {
+  color: #007BFF; /* Change text color on hover */
+}
+
+.menu {
+  position: relative;
+  top: -15%;
+  width: 100%;
+}
+
+/*# sourceMappingURL=test.css.map */

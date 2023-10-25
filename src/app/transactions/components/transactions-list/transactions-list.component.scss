@@ -8,12 +8,27 @@
 
     table {
       tr {
-        :hover {
+        &:hover {
           cursor: pointer;
         }
 
-        /* Adjust padding to add more space between rows */
-        padding: 10px 0;
+        /* Spacing between rows using margin for better visual separation */
+        & + tr {
+          margin-top: 8px;
+        }
+
+        td, th {
+          /* Adjust padding to add more space vertically inside each cell */
+          padding: 12px 8px;
+
+          /* Adding border-bottom to visually separate rows */
+          border-bottom: 1px solid #e0e0e0;
+        }
+
+        /* Zebra striping */
+        &:nth-child(even) {
+          background-color: #fdfdfd;
+        }
       }
 
       .negative-amount {
@@ -35,3 +50,29 @@
 
   margin-bottom: 1%;
 }
+
+.status-badge {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 3px;
+  font-size: 10px;
+  background-color: #e5e5e5; /* default gray background */
+  color: #333;               /* default dark text color */
+}
+
+
+.New {
+  background-color: #eee;
+  color: #666;
+}
+
+.Completed {
+  background-color: rgba(40, 167, 69, 0.57); /* green color */
+  color: #fff;
+}
+
+.Scheduled {
+  background-color: rgba(255, 193, 7, 0.51); /* amber color */
+  color: #fff;
+}
+
