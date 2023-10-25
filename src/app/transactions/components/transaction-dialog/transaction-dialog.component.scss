@@ -1,22 +1,54 @@
 .container {
-  background-color: #fff;
+  background-color: #f7f7f7;
   border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;  /* Taking full width of the dialog */
+  height: 100%;  /* Taking full height of the dialog */
+  overflow-y: auto;  /* Allow scrolling if content overflows */
 }
 
 form {
-  width: 60%;
+  width: 90%;  /* Little less than container width for padding effect */
   padding: 20px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
 
   .formButtons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
     button {
-      margin: 3%;
+      margin: 10px 0;
     }
   }
 }
 
+.form-title {
+  text-align: center;
+  margin-bottom: 20px;  /* Spacing after title */
+}
+
+.form-title h2 {
+  font-size: 24px;      /* Adjust size as needed */
+  color: #333;
+  margin: 0;            /* Removes default margin to give better control */
+  padding-bottom: 10px; /* Spacing */
+  border-bottom: 2px solid #e0e0e0;  /* Optional underline */
+}
+
+
+mat-form-field {
+  width: 100%;
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 600px) {
+  .container {
+    overflow-y: scroll;
+  }
+}

@@ -1,5 +1,9 @@
 <div class="container">
   <form #transactionForm="ngForm" (ngSubmit)="onSubmit()" novalidate>
+    <div class="form-title">
+      <h2>Transaction Details</h2>
+    </div>
+
     <mat-form-field>
       <mat-label>Recipient</mat-label>
       <input matInput  type="text" id="recipient" name="recipient" [(ngModel)]="transaction.recipient">
