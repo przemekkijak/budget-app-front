@@ -1,32 +1,32 @@
 <div class="container">
   <form #transactionForm="ngForm" (ngSubmit)="onSubmit()" novalidate>
     <div class="form-title">
-      <h2>Transaction Details</h2>
+      <h2>Szczegóły transakcji</h2>
     </div>
 
     <mat-form-field>
-      <mat-label>Recipient</mat-label>
+      <mat-label>Odbiorca</mat-label>
       <input matInput  type="text" id="recipient" name="recipient" [(ngModel)]="transaction.recipient">
     </mat-form-field>
 
     <mat-form-field>
-      <mat-label>Amount</mat-label>
+      <mat-label>Kwota</mat-label>
       <input matInput type="number" id="amount" name="amount" [(ngModel)]="transaction.amount" required>
     </mat-form-field>
 
     <mat-form-field>
-      <mat-label>Description</mat-label>
+      <mat-label>Opis</mat-label>
       <input matInput id="description" name="description" [(ngModel)]="transaction.description">
     </mat-form-field>
 
     <mat-form-field>
-      <mat-label>Payment Date</mat-label>
+      <mat-label>Data płatnosci</mat-label>
       <input matInput type="date" id="paymentDate" name="paymentDate" [(ngModel)]="transaction.paymentDate" required>
     </mat-form-field>
 
     <div *ngIf="budgetBankAccounts">
       <mat-form-field>
-        <mat-label>Bank account</mat-label>
+        <mat-label>Konto bankowe</mat-label>
         <mat-select id="bankAccount" name="bankAccount" [(ngModel)]="transaction.bankAccountId" required>
           <mat-option *ngFor="let bankAccount of budgetBankAccounts" [value]="bankAccount.id">{{ bankAccount.name }}</mat-option>
         </mat-select>
@@ -41,9 +41,9 @@
     </mat-form-field>
 
     <div class="formButtons">
-      <button mat-raised-button color="primary" type="submit" id="buttonSave" [disabled]="!transactionForm.valid">Save</button>
-      <button mat-raised-button type="button" id="buttonCancel" (click)="onCancel()">Cancel</button>
-      <button mat-raised-button color="warn" type="button" id="buttonDelete" (click)="onDelete()" *ngIf="deleteAvailable">Delete</button>
+      <button mat-raised-button color="primary" type="submit" id="buttonSave" [disabled]="!transactionForm.valid">Zapisz</button>
+      <button mat-raised-button type="button" id="buttonCancel" (click)="onCancel()">Anuluj</button>
+      <button mat-raised-button color="warn" type="button" id="buttonDelete" (click)="onDelete()" *ngIf="deleteAvailable">Usuń</button>
     </div>
 
   </form>

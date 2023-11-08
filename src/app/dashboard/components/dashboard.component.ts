@@ -12,9 +12,9 @@ export class DashboardComponent implements OnInit {
   public budget: Budget | null = null;
 
   accounts = [
-    { title: 'Total Income', value: 5430.00 },
-    { title: 'Total Expenses', value: 2920.00 },
-    { title: 'Net income', value: 2510.00 }
+    { title: 'Łączny przychód', value: 5430.00 },
+    { title: 'Łączne wydatki', value: 2920.00 },
+    { title: 'Bilans', value: 2510.00 }
   ];
   constructor(private budgetService: BudgetsService) {
   }

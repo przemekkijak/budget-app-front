@@ -21,7 +21,7 @@ export class TransactionsChartComponent {
     plugins: {
       title: {
         display: true,
-        text: 'Daily spendings',
+        text: 'Dzienne wydatki',
       },
     },
     scales: {
