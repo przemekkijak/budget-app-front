@@ -4,32 +4,31 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  background-color: #ffffff;
-  border-right: 1px solid #e0e0e0;
+  background-color: #214a37; /* Dark green background for the sidebar */
+  color: #ffffff; /* White text color for better contrast */
 }
 
 .logo {
   font-size: 24px;
   font-weight: bold;
-  padding: 10px 20px;
+  padding: 20px;
   text-align: center;
-  width: 96%;
-  margin-top: 5%;   // Reduced margin-top
-  margin-bottom: 60%;  // Reduced margin-bottom
+  width: 100%;
+  background-color: #1e4432; /* Slightly darker green for logo section */
+  margin-bottom: 2%; /* Space between logo and menu items */
 }
 
 .menu {
   width: 100%;
-  background-color: #ffffff;
   overflow-y: auto;
   overflow-x: hidden;
 }
 
 .menuItem {
   transition: background-color 0.3s ease;
-  width: 90%;
-  border-bottom: 1px solid #e0e0e0;
-  padding: 8px 0;  // Added vertical padding
+  width: 100%;
+  padding: 14px 20px;
+  border-bottom: 1px solid #1e4432; /* Slightly darker green for item borders */
 }
 
 .menuItem:last-child {
@@ -37,23 +36,24 @@
 }
 
 .menuItem:hover, .menuItem.active {
-  background-color: #f5f5f5;
+  background-color: #2e6651; /* Slightly lighter green for hover/active state */
 }
 
 .menuLink {
-  color: #333;
+  color: #cfd8dc; /* Light grey for text to stand out */
   text-decoration: none;
-  display: block;
-  padding: 14px 20px;   // Adjusted padding
-  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 14px 20px;
   transition: color 0.3s;
 }
 
-.menuLink i {  /* Targeting the icon in the menu link */
-  margin-right: 10px;  /* Space between the icon and the text */
+.menuLink i {
+  margin-right: 10px; /* Space between the icon and the text */
+  color: #a5b1b4; /* Light grey for icons */
 }
 
 .menuLink:hover, .menuLink.active {
-  color: #007BFF;
-  font-weight: bold;  // Highlight active menu item
+  color: #ffffff; /* White color for text when active/hover */
+  font-weight: bold; /* Bold for selected item */
 }

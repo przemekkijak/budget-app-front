@@ -4,8 +4,8 @@
   height: 100vh;
 
   .sidebar {
-    flex: 0 0 12%; /* This sets the sidebar to a fixed width of 12% of the container */
-    max-width: 12%; /* Ensure it doesn't grow beyond 12% */
+    flex: 0 0 13%; /* This sets the sidebar to a fixed width of 12% of the container */
+    max-width: 15%; /* Ensure it doesn't grow beyond 12% */
     overflow-y: hidden; /* If the content in the sidebar exceeds its height, a scrollbar will appear */
   }
 

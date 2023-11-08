@@ -1,4 +1,25 @@
+.container {
+  mat-table {
+    width: 100%;
+    background-color: #fff; // Match with the other widgets
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden; // To ensure the border-radius clips the content
 
-mat-header-cell, mat-cell {
-  font-size: 10px;
+    mat-header-cell {
+      background-color: #f0f0f0; // A light grey for the header to distinguish it
+      color: #333;
+      font-size: 12px; // Slightly larger font size for readability
+      font-weight: 500; // Medium weight for the header
+    }
+
+    mat-cell {
+      font-size: 12px; // Standardize the font size
+      color: #555; // Slightly lighter for content
+    }
+
+    mat-header-row, mat-row {
+      min-height: 48px; // Increase row height for spacing
+    }
+  }
 }
