@@ -1,0 +1,22 @@
+.container {
+  margin: 15px;
+  height: 100vh;
+  display: flex;
+  justify-content: center; // This will center the card
+}
+
+mat-table {
+  max-width: 60%; // Adjust this percentage to your preference
+  margin: auto; // This will center the table within the card
+}
+
+mat-header-cell, mat-cell {
+  padding: 8px;
+  text-align: center; // This centers the text within cells
+}
+
+// If you want to ensure the table is not too wide
+.table-container {
+  max-width: 600px; // Or whatever your preferred width is
+  margin: auto; // This will center the table container
+}

@@ -1,0 +1,38 @@
+<div class="container">
+  <mat-card-title>Subskrybcje</mat-card-title>
+
+  <div class="table-container">
+    <mat-table [dataSource]="subscriptions">
+
+      <ng-container matColumnDef="name">
+        <mat-header-cell *matHeaderCellDef> Nazwa </mat-header-cell>
+        <mat-cell *matCellDef="let subscription"> {{ subscription.name }} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="amount">
+        <mat-header-cell *matHeaderCellDef> Kwota </mat-header-cell>
+        <mat-cell *matCellDef="let subscription"> {{ subscription.amount }} zł </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="subscriptionSince">
+        <mat-header-cell *matHeaderCellDef> Subskrybcja od </mat-header-cell>
+        <mat-cell *matCellDef="let subscription"> {{ subscription.subscriptionSince | date }} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="totalSpent">
+        <mat-header-cell *matHeaderCellDef> Łącznie wydano </mat-header-cell>
+        <mat-cell *matCellDef="let subscription"> {{ subscription.totalSpent }} zł </mat-cell>
+      </ng-container>
+
+
+      <ng-container matColumnDef="paymentDate">
+        <mat-header-cell *matHeaderCellDef> Następna płatność </mat-header-cell>
+        <mat-cell *matCellDef="let subscription"> {{ subscription.paymentDate | date }} </mat-cell>
+      </ng-container>
+
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+
+    </mat-table>
+  </div>
+</div>
